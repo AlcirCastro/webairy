@@ -124,9 +124,113 @@ function goBack() {
     }, 500); // Tempo da animação (deve coincidir com o valor da transição no CSS)
 }
 
+//Implementação pra carrossel de fotos, ou cards
+const carouselContainer = document.querySelector('.carousel__container');
+const prevButton = document.querySelector('.carousel__control.prev');
+const nextButton = document.querySelector('.carousel__control.next');
+let currentIndex = 0;
+const totalItems = carouselContainer.children.length;
+const itemsPerPage = 2;
+const totalPages = Math.ceil(totalItems / itemsPerPage);
+let startX = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let isDragging = false;
+let animationID;
+let startPos = 0;
+let isDraggingWithMouse = false;
 
+function updateCarousel() {
+  const itemWidth = carouselContainer.children[0].clientWidth;
+  currentTranslate = -currentIndex * itemWidth * itemsPerPage;
+  carouselContainer.style.transform = `translateX(${currentTranslate}px)`;
+}
 
+function touchStart(index) {
+  return function(event) {
+    isDragging = true;
+    startX = getPositionX(event);
+    startPos = currentTranslate;
+    animationID = requestAnimationFrame(animation);
+    carouselContainer.classList.add('grabbing');
+    isDraggingWithMouse = event.type.includes('mouse');
+  };
+}
 
+function touchMove(event) {
+  if (isDragging) {
+    const currentPosition = getPositionX(event);
+    currentTranslate = prevTranslate + currentPosition - startX;
+  }
+}
+
+function touchEnd() {
+  if (!isDragging) return;
+  isDragging = false;
+  cancelAnimationFrame(animationID);
+  const movedBy = currentTranslate - startPos;
+
+  if (movedBy < -100 && currentIndex < totalPages - 1) currentIndex += 1;
+  if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
+
+  setPositionByIndex();
+  carouselContainer.classList.remove('grabbing');
+  prevTranslate = currentTranslate;
+  isDraggingWithMouse = false;
+}
+
+function getPositionX(event) {
+  return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+}
+
+function animation() {
+  setCarouselPosition();
+  if (isDragging) requestAnimationFrame(animation);
+}
+
+function setCarouselPosition() {
+  carouselContainer.style.transform = `translateX(${currentTranslate}px)`;
+}
+
+function setPositionByIndex() {
+  const itemWidth = carouselContainer.children[0].clientWidth;
+  currentTranslate = -currentIndex * itemWidth * itemsPerPage;
+  prevTranslate = currentTranslate;
+  setCarouselPosition();
+}
+
+// Controle de botões
+nextButton.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % totalPages;
+  setPositionByIndex();
+});
+
+prevButton.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + totalPages) % totalPages;
+  setPositionByIndex();
+});
+
+// Eventos de swipe
+carouselContainer.addEventListener('touchstart', touchStart(), { passive: true });
+carouselContainer.addEventListener('touchmove', touchMove, { passive: true });
+carouselContainer.addEventListener('touchend', touchEnd);
+
+carouselContainer.addEventListener('mousedown', touchStart());
+carouselContainer.addEventListener('mousemove', touchMove);
+carouselContainer.addEventListener('mouseup', touchEnd);
+carouselContainer.addEventListener('mouseleave', () => {
+  if (isDraggingWithMouse) touchEnd();
+});
+
+// Inicialize o carrossel na posição correta
+updateCarousel();
+
+// Rotação automática a cada 3 segundos (somente se não estiver interagindo com o carrossel)
+setInterval(() => {
+  if (!isDragging) {
+    nextButton.click();
+  }
+}, 3000);
 
 
 

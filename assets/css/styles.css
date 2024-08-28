@@ -637,7 +637,71 @@ img {
   background-color: var(--first-color)
 }
 
+/*Carrossel de fotos */
+/* ===== ABOUT ===== */
+/* ===== ABOUT ===== */
+/* ===== ABOUT ===== */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
+.carousel__container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* Mantém a largura em 100%, pois a largura dos itens será ajustada */
+}
+
+.carousel__item {
+  width: 50%; /* Cada item ocupa 50% da largura disponível para exibir dois itens */
+  box-sizing: border-box;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel__img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.carousel__name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.carousel__role {
+  font-size: 1rem;
+  color: #555;
+}
+
+.carousel__control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.carousel__control.prev {
+  left: 10px;
+}
+
+.carousel__control.next {
+  right: 10px;
+}
 
 
 
