@@ -689,11 +689,20 @@ img {
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
+  border-radius: 10px; /* Borda suavizada */
   color: white;
-  font-size: 2rem;
+  font-size: 25px;
   padding: 0.5rem;
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave */
+  transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
 }
+
+.carousel__control:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Efeito ao passar o mouse */
+  transform: translateY(-50%) scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
 
 .carousel__control.prev {
   left: 10px;
