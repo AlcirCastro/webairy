@@ -80,7 +80,12 @@ const handleSubmit = (event) => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({name, email, message, confirm}),
-    }).then(() => removeLoading());
+    })    
+    .then(() => {
+      removeLoading();
+      alert('Obrigado por se inscrever! Você receberá nossas atualizações em breve.');
+      form.reset();
+  })
 }
 
 document.querySelector('form').addEventListener('submit', handleSubmit);
