@@ -83,7 +83,7 @@ const handleSubmit = (event) => {
     .then(() => {
       removeLoading();
       alert('Obrigado por se inscrever! Você receberá nossas atualizações em breve.');
-      redirect('https://www.airyiot.com');
+      window.location.href = 'https://www.airyiot.com';
   })
 }
 
