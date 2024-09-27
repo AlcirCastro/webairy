@@ -53,41 +53,38 @@ const removeLoading = () =>{
 }
 
 const handleSubmit = (event) => {
-  event.preventDefault();
-  addLoading();
-  const nameInput = document.querySelector('input[name="name"]');
-  const emailInput = document.querySelector('input[name="email"]');
-  const checkInput = document.getElementById('check');
-  const name = nameInput.value;
-  const email = emailInput.value;
-  const check = checkInput.checked;
-  let confirm = check ? "true" : "false"; // Simplificação
+    event.preventDefault();
+    addLoading();
+    const name = document.querySelector('input[name="name"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const check = document.getElementById('check').checked;
+    let confirm = "";
+    if (!check){
+        confirm = "false"
+    }else{
+        confirm = "true"
+    }
+    
+    const captchaResponse = grecaptcha.getResponse();
+    if (!captchaResponse.length > 0){
+        removeLoading();
+        alert('Valide o captcha');
+        throw new Error('Captcha is required');
+    }
 
-  const captchaResponse = grecaptcha.getResponse();
-  if (!captchaResponse.length > 0) {
-      removeLoading();
-      alert('Valide o captcha');
-      throw new Error('Captcha is required');
-  }
-
-  fetch('https://api.sheetmonkey.io/form/4YHjCHRw4PDHPsghxpBwrt', {
-      method: 'POST',
-      headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, email, confirm }),
-  })
-  .then(() => {
+    fetch('https://api.sheetmonkey.io/form/4YHjCHRw4PDHPsghxpBwrt', {
+        method: 'POST',
+        headers: {
+            'Aceppt': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({name, email, confirm}),
+    })    
+    .then(() => {
       removeLoading();
       alert('Obrigado por se inscrever! Você receberá nossas atualizações em breve.');
-      
-      // Limpa os campos do formulário manualmente
-      nameInput.value = '';
-      emailInput.value = '';
-      checkInput.checked = false; // Desmarcar o checkbox
-
-  });
+      redirect('https://www.airyiot.com');
+  })
 }
 
 document.querySelector('form').addEventListener('submit', handleSubmit);
