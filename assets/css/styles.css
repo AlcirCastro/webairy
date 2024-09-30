@@ -164,6 +164,16 @@ img {
   cursor: pointer;
 }
 
+.nav__social-icons{
+  font-size: 24px; 
+  margin-left: 12px; 
+  color: black;
+}
+
+.nav__social-icons .bx:hover {
+  color: var(--first-color);
+}
+
 /*Active menu*/
 .active-link::after {
   position: absolute;
@@ -208,11 +218,6 @@ img {
 }
 .home__social-icon:hover {
   color: var(--first-color);
-}
-
-.nav__social-icons .bx {
-  font-size: 24px; 
-  margin-left: 12px; 
 }
 
 .home__img {
