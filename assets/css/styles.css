@@ -209,6 +209,12 @@ img {
 .home__social-icon:hover {
   color: var(--first-color);
 }
+
+.nav__social-icons .bx {
+  font-size: 24px; 
+  margin-left: 12px; 
+}
+
 .home__img {
   position: absolute;
   right: 0;
