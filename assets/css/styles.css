@@ -174,6 +174,18 @@ img {
   color: var(--first-color);
 }
 
+.icon_coleira{
+  font-size: 24px; 
+  margin-left: 12px; 
+  color: black;
+}
+
+.icon_coleira:hover {
+  color: var(--first-color);
+}
+
+
+
 /*Active menu*/
 .active-link::after {
   position: absolute;
@@ -356,6 +368,7 @@ img {
   cursor: pointer;
   margin-left: auto;
 }
+
 
 /* ===== FOOTER =====*/
 .footer {

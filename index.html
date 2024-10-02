@@ -99,7 +99,7 @@
     </section>
 
     <!--===== ABOUT =====-->
-    <section class="about section" id="about">
+    <section class="about section" id="about"style="background-color: #fafafa ">
       <h2 class="section-title">Sobre Nós</h2>
 
       <div class="about__container bd-grid">
@@ -121,11 +121,10 @@
 
    
     <!--===== Projetos =====-->
-    <section class="work section" id="work">
-      <h2 class="section-title">Projetos</h2>
+    <section class="work section" id="work" >
+      <h2 class="section-title">Coleira Airy</h2>
 
       <div class="work__container bd-grid">
-
         <p></p>
         <div class="work__img" onclick="showProject('project2')">
           <img src="assets/img/cachorro.png" alt="" />
@@ -133,27 +132,53 @@
         <p></p>
       </div>
 
+      <div class="work__container bd-grid" style="display: flex; justify-content: center; margin-top: 20px;">
+        <div class="icon-container" style="display: flex; justify-content: space-between; width: 250px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="70" fill="currentColor" class = "icon_coleira" class="bi bi-compass icon-spacing" viewBox="0 0 16 16" onclick="showProject('localizacao')">
+            <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/>
+            <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="70" fill="currentColor" class = "icon_coleira" class="bi bi-file-earmark-medical icon-spacing" viewBox="0 0 16 16" onclick="showProject('saude')">
+            <path d="M7.5 5.5a.5.5 0 0 0-1 0v.634l-.549-.317a.5.5 0 1 0-.5.866L6 7l-.549.317a.5.5 0 1 0 .5.866l.549-.317V8.5a.5.5 0 1 0 1 0v-.634l.549.317a.5.5 0 1 0 .5-.866L8 7l.549-.317a.5.5 0 1 0-.5-.866l-.549.317zm-2 4.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
+            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="70" fill="currentColor"  class = "icon_coleira"
+          class="bi bi-thermometer-half icon-spacing" viewBox="0 0 16 16" onclick="showProject('temp')">
+            <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V6.5a.5.5 0 0 1 1 0v4.585a1.5 1.5 0 0 1 1 1.415"/>
+            <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1"/>
+          </svg>
+        </div>
+      </div>
+
     </section>
 
     <!--===== (Overlay) =====-->
-    <div class="project-overlay" id="projectOverlay">
+    <!--===== (Overlay) =====-->
+<div class="project-overlay" id="projectOverlay">
+  <!--===== Coleira Localização (Overlay) =====-->
+  <div class="project-content" id="localizacao">
+    <button class="back-button" onclick="goBack()">Voltar</button>
+    <h2 class="section-title">Localização</h2>
+    <img src="assets/img/telaLocalizacao.png">
+  </div>
 
-      <!--===== Coleira(Overlay) =====-->
+  <!--===== Saúde (Overlay) =====-->
+  <div class="project-content" id="saude">
+    <button class="back-button" onclick="goBack()">Voltar</button>
+    <h2 class="section-title">Saúde</h2>
+    <img src="assets/img/telaSaude.png">
+  </div>
 
-      <div class="project-content" id="project2">
-        <button class="back-button" onclick="goBack()">Voltar</button>
-        <h2 class="section-title">Coleira Pet</h2>
-        <p>Detalhar sobre a Coleira</p>
-        <p>Detalhar sobre a Coleira</p>
-        <p>Detalhar sobre a Coleira</p>
-        <p>Detalhar sobre a Coleira</p>
-        <p>Detalhar sobre a Coleira</p>
-        <p>Detalhar sobre a Coleira</p>
-      </div>
-    </div>
+  <!--===== Temperatura (Overlay) =====-->
+  <div class="project-content" id="temp">
+    <button class="back-button" onclick="goBack()">Voltar</button>
+    <h2 class="section-title">Temperatura</h2>
+    <img src="assets/img/image.png">
+  </div>
+</div>
 
     <!--===== CONTACT =====-->
-    <section class="contact section" id="contact">
+    <section class="contact section" id="contact" style="background-color: #fafafa ">
       <h2 class="section-title">Cadastre-se</h2>
 
       <div class="contact__container bd-grid">
@@ -165,17 +190,11 @@
             <input type="checkbox" class="checkbox-input" id="check" />
             <span class="checkmark"></span>
           </label>
-          <div class="g-recaptcha" data-sitekey="6Le1NDEqAAAAAELbYtY8nyyRVs6rmrTOtFXvZSw6" style="
-                padding: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-              "></div>
           <button type="submit" id="button" class="button-submit">
             Enviar
           </button>
         </form>
-      </div>
+      </div>  
     </section>
   </main>
 
