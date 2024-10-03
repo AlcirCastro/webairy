@@ -24,7 +24,7 @@
   <!--===== HEADER =====-->
   <header class="l-header">
     <nav class="nav bd-grid">
-      <div>
+      <div >
         <a href="#" class="nav__logo">
           <img src="assets/img/LOGO_REDUZIDA POSITIVA.png" width="55px" /></a>
       </div>
@@ -59,9 +59,9 @@
 
   <main class="l-main">
     <!--===== HOME =====-->
-    <section class="home bd-grid" id="home">
-      <div class="home__data">
-        <h1 class="home__title">
+    <section class="home bd-grid" id="home" >
+      <div class="home__data" >
+        <h1 class="home__title" >
           Transformando sua <br />
           vida e seu negócio <br />
           com soluções IoT
@@ -81,7 +81,7 @@
 
     <div style="height: 60px;"></div> 
 
-      <div class="home__img">
+      <div class="home__img" >
         <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0" mask-type="alpha">
@@ -126,27 +126,37 @@
 
       <div class="work__container bd-grid">
         <p></p>
-        <div class="work__img" onclick="showProject('project2')">
+        <div class="work__img" >
           <img src="assets/img/cachorro.png" alt="" />
         </div>
-        <p></p>
+
       </div>
 
       <div class="work__container bd-grid" style="display: flex; justify-content: center; margin-top: 20px;">
-        <div class="icon-container" style="display: flex; justify-content: space-between; width: 250px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="70" fill="currentColor" class = "icon_coleira" class="bi bi-compass icon-spacing" viewBox="0 0 16 16" onclick="showProject('localizacao')">
-            <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/>
-            <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="70" fill="currentColor" class = "icon_coleira" class="bi bi-file-earmark-medical icon-spacing" viewBox="0 0 16 16" onclick="showProject('saude')">
-            <path d="M7.5 5.5a.5.5 0 0 0-1 0v.634l-.549-.317a.5.5 0 1 0-.5.866L6 7l-.549.317a.5.5 0 1 0 .5.866l.549-.317V8.5a.5.5 0 1 0 1 0v-.634l.549.317a.5.5 0 1 0 .5-.866L8 7l.549-.317a.5.5 0 1 0-.5-.866l-.549.317zm-2 4.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
-            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="70" fill="currentColor"  class = "icon_coleira"
-          class="bi bi-thermometer-half icon-spacing" viewBox="0 0 16 16" onclick="showProject('temp')">
-            <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V6.5a.5.5 0 0 1 1 0v4.585a1.5 1.5 0 0 1 1 1.415"/>
-            <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1"/>
-          </svg>
+        <div class="icon-container" style="display: flex; justify-content: space-evenly; gap: 70px; width: 400px;">
+          <div style="text-align: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" fill="currentColor" class="icon_coleira" viewBox="0 0 16 16" onclick="showProject('localizacao')">
+              <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/>
+              <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+            </svg>
+            <p>Veja onde seu pet está em tempo real.</p>
+          </div>
+      
+          <div style="text-align: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" fill="currentColor" class="icon_coleira" viewBox="0 0 16 16" onclick="showProject('saude')">
+              <path d="M7.5 5.5a.5.5 0 0 0-1 0v.634l-.549-.317a.5.5 0 1 0-.5.866L6 7l-.549.317a.5.5 0 1 0 .5.866l.549-.317V8.5a.5.5 0 1 0 1 0v-.634l.549.317a.5.5 0 1 0 .5-.866L8 7l.549-.317a.5.5 0 1 0-.5-.866l-.549.317zm-2 4.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
+              <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+            </svg>
+            <p style="text-align: center;">Saiba se seu pet anda estressado ou necessitando de alguns passeios</p>
+          </div>
+
+           <div style="text-align: center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="70" fill="currentColor" class="icon_coleira" viewBox="0 0 16 16" onclick="showProject('temp')">
+                <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V6.5a.5.5 0 0 1 1 0v4.585a1.5 1.5 0 0 1 1 1.415"/>
+                <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1"/>
+              </svg>
+              <p>Está fora de casa e não sabe como está a temperatura? Veja se seu pet está com calor.</p>
+            </div>
         </div>
       </div>
 
@@ -203,7 +213,7 @@
     <!-- Logo and Description -->
     <div class="footer__logo" style="flex: 1;">
       <img src="assets/img/LOGO_HORIZONTAL COR PRIMARIA.png" alt="Airy Logo" style="width: 150px; margin-left:20%">
-      <p style="max-width: 300px; margin-top: 10px;">Airy Iot, sempre cuidando do seu pet.</p>
+      <p style="max-width: 300px; margin-top: 10px;">Airy IoT, sempre cuidando de você.</p>
     </div>
 
     <!-- Links Section -->

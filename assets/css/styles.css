@@ -215,7 +215,7 @@ img {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
 }
-.home__title-color {
+.home__title-color {  
   color: var(--first-color);
 }
 .home__social {
