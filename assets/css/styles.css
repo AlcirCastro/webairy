@@ -761,6 +761,14 @@ img {
   flex-wrap: wrap;
 }
 
+.features img {
+  margin: auto;
+}
+
+.features svg{
+  margin: auto;
+}
+
 .card {
   background-color: #fff;
   padding: 20px;
