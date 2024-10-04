@@ -10,6 +10,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
 
   <!-- =====BOX ICONS===== -->
   <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
@@ -18,13 +20,15 @@
   <title>Airy</title>
 
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
 </head>
 
 <body>
   <!--===== HEADER =====-->
   <header class="l-header">
     <nav class="nav bd-grid">
-      <div >
+      <div data-aos="fade-up">
         <a href="#" class="nav__logo">
           <img src="assets/img/LOGO_REDUZIDA POSITIVA.png" width="55px" /></a>
       </div>
@@ -46,12 +50,12 @@
         </ul>
       </div>
 
-      <div class="nav__social-icons">
+      <div class="nav__social-icons" data-aos="fade-up">
         <a href="https://www.linkedin.com/in/airy-iot/" target="_blank" class="nav__social-icons"><i class="bx bxl-linkedin"></i></a>
         <a href="https://www.instagram.com/airyiot?igsh=MThtamlocDRxc3E0bw==" target="_blank" class="nav__social-icons  "><i class="bx bxl-instagram"></i></a>
       </div>
 
-      <div class="nav__toggle" id="nav-toggle">
+      <div class="nav__toggle" id="nav-toggle" data-aos="fade-up">
         <i class="bx bx-menu"></i>
       </div>
     </nav>
@@ -60,7 +64,7 @@
   <main class="l-main">
     <!--===== HOME =====-->
     <section class="home bd-grid" id="home" >
-      <div class="home__data" >
+      <div class="home__data" data-aos="fade-up">
         <h1 class="home__title" >
           Transformando sua <br />
           vida e seu negócio <br />
@@ -81,7 +85,7 @@
 
     <div style="height: 60px;"></div> 
 
-      <div class="home__img" >
+      <div class="home__img" data-aos="fade-up">
         <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0" mask-type="alpha">
@@ -102,12 +106,12 @@
     <section class="about section" id="about"style="background-color: #fafafa ">
       <h2 class="section-title">Sobre Nós</h2>
 
-      <div class="about__container bd-grid">
+      <div class="about__container bd-grid" data-aos="fade-up">
         <div class="about__img">
           <img src="assets/img/equipe_airy.jpeg" alt="" />
         </div>
 
-        <div>
+        <div data-aos="fade-up">
           <h2 class="about__subtitle">Somos a Airy</h2>
           <p class="about__text">
             Apaixonados por tecnologia, acreditamos que a Internet das Coisas pode transformar a sua vida e daqueles que você ama. 
@@ -121,65 +125,57 @@
 
    
     <!--===== Projetos =====-->
-    <section class="work section" id="work" >
+    <section class="work section" id="work" data-aos="fade-up" >
       <h2 class="section-title">Coleira Airy</h2>
 
-      <div class="work__container bd-grid">
-        <p></p>
-        <div class="work__img" >
-          <img src="assets/img/cachorro.png" alt="" />
+      <div class="container" data-aos="fade-up">
+        <div class="product-image">
+          <img src="assets/img/cachorro.png" alt="Coleira Airy no pet">
         </div>
-
-      </div>
-
-      <div class="work__container bd-grid" style="display: flex; justify-content: center; margin-top: 20px;">
-        <div class="icon-container" style="display: flex; justify-content: space-evenly; gap: 70px; width: 400px;">
-          <div style="text-align: center;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="70" fill="currentColor" class="icon_coleira" viewBox="0 0 16 16" onclick="showProject('localizacao')">
-              <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/>
-              <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
-            </svg>
-            <p>Veja onde seu pet está em tempo real.</p>
+    
+        <div class="features" data-aos="fade-up">
+          <!-- Feature 1 -->
+          <div class="card">
+            <img src="https://img.icons8.com/ios-filled/50/000000/compass.png" alt="Monitoramento">
+            <h2 class="card-title">Monitoramento em Tempo Real</h2>
+            <p class="card-description">Veja onde seu pet está a qualquer momento, com dados precisos de localização.</p>
           </div>
-      
-          <div style="text-align: center;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="70" fill="currentColor" class="icon_coleira" viewBox="0 0 16 16" onclick="showProject('saude')">
-              <path d="M7.5 5.5a.5.5 0 0 0-1 0v.634l-.549-.317a.5.5 0 1 0-.5.866L6 7l-.549.317a.5.5 0 1 0 .5.866l.549-.317V8.5a.5.5 0 1 0 1 0v-.634l.549.317a.5.5 0 1 0 .5-.866L8 7l.549-.317a.5.5 0 1 0-.5-.866l-.549.317zm-2 4.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
-              <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
-            </svg>
-            <p style="text-align: center;">Saiba se seu pet anda estressado ou necessitando de alguns passeios</p>
+    
+          <!-- Feature 2 -->
+          <div class="card" data-aos="fade-up">
+            <img src="https://img.icons8.com/ios-filled/50/000000/paper.png" alt="Bem-estar">
+            <h2 class="card-title">Bem-Estar e Saúde</h2>
+            <p class="card-description">Saiba se seu pet está estressado ou precisa de mais passeios para manter a saúde.</p>
           </div>
-
-           <div style="text-align: center;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="70" fill="currentColor" class="icon_coleira" viewBox="0 0 16 16" onclick="showProject('temp')">
-                <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V6.5a.5.5 0 0 1 1 0v4.585a1.5 1.5 0 0 1 1 1.415"/>
-                <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1"/>
-              </svg>
-              <p>Está fora de casa e não sabe como está a temperatura? Veja se seu pet está com calor.</p>
-            </div>
+    
+          <!-- Feature 3 -->
+          <div class="card" data-aos="fade-up">
+            <img src="https://img.icons8.com/ios-filled/50/000000/thermometer.png" alt="Temperatura">
+            <h2 class="card-title">Controle de Temperatura</h2>
+            <p class="card-description">Monitore a temperatura ambiente e saiba se seu pet está confortável.</p>
+          </div>
         </div>
-      </div>
 
     </section>
 
     <!--===== (Overlay) =====-->
-<div class="project-overlay" id="projectOverlay">
+<div class="project-overlay" id="projectOverlay" data-aos="fade-up">
   <!--===== Coleira Localização (Overlay) =====-->
   <div class="project-content" id="localizacao">
     <button class="back-button" onclick="goBack()">Voltar</button>
     <h2 class="section-title">Localização</h2>
-    <img src="assets/img/telaLocalizacao.png">
+    <img src="assets/img/localizacao.gif" alt="Imagem de localização do pet">
   </div>
 
   <!--===== Saúde (Overlay) =====-->
-  <div class="project-content" id="saude">
+  <div class="project-content" id="saude" data-aos="fade-up">
     <button class="back-button" onclick="goBack()">Voltar</button>
     <h2 class="section-title">Saúde</h2>
     <img src="assets/img/telaSaude.png">
   </div>
 
   <!--===== Temperatura (Overlay) =====-->
-  <div class="project-content" id="temp">
+  <div class="project-content" id="temp" data-aos="fade-up">
     <button class="back-button" onclick="goBack()">Voltar</button>
     <h2 class="section-title">Temperatura</h2>
     <img src="assets/img/temp.png">
@@ -190,7 +186,7 @@
     <section class="contact section" id="contact" style="background-color: #fafafa ">
       <h2 class="section-title">Cadastre-se</h2>
 
-      <div class="contact__container bd-grid">
+      <div class="contact__container bd-grid" data-aos="fade-up">
         <form action="" class="contact__form">
           <input type="text" placeholder="Insira seu nome" class="contact__input" , name="name" />
           <input type="mail" placeholder="Insira seu Email" class="contact__input" , name="email" />
@@ -209,7 +205,7 @@
 
 <!--===== FOOTER =====-->
 <footer class="footer" style="background-color: hsl(var(--hue-color), 56%, 12%); padding: 40px 0; color: #fff;">
-  <div class="footer__container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+  <div class="footer__container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;" data-aos="fade-up">
     <!-- Logo and Description -->
     <div class="footer__logo" style="flex: 1;">
       <img src="assets/img/LOGO_HORIZONTAL COR PRIMARIA.png" alt="Airy Logo" style="width: 150px; margin-left:20%">
@@ -217,7 +213,7 @@
     </div>
 
     <!-- Links Section -->
-    <div class="footer__links" style="flex: 2; display: flex; justify-content: space-around; margin-top: 20px;">
+    <div class="footer__links" style="flex: 2; display: flex; justify-content: space-around; margin-top: 20px;" data-aos="fade-up">
       <!-- Início -->
       <div>
         <h3 style="color: #fff;">
@@ -226,21 +222,21 @@
       </div>
 
       <!-- Sobre nós -->
-      <div>
+      <div data-aos="fade-up">
         <h3 style="color: #fff;">
           <a href="#about" style="color: #fff; text-decoration: none;">Sobre nós</a>
         </h3>
       </div>
 
       <!-- Projetos -->
-      <div>
+      <div data-aos="fade-up">
         <h3 style="color: #fff;">
           <a href="#work" style="color: #fff; text-decoration: none;">Projetos</a>
         </h3>
       </div>
 
       <!-- Cadastre-se -->
-      <div>
+      <div data-aos="fade-up">
         <h3 style="color: #fff;">
           <a href="#contact" style="color: #fff; text-decoration: none;">Cadastre-se</a>
         </h3>
@@ -273,5 +269,9 @@
   <!--===== MAIN JS =====-->
   <script src="assets/js/main.js"></script>
 </body>
+
+<script>
+  AOS.init();
+</script>
 
 </html>
