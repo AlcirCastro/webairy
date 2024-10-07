@@ -10,6 +10,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
 
   <!-- =====BOX ICONS===== -->
   <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
@@ -29,6 +31,9 @@
   gtag('config', 'G-GXPVRFLBY8');
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://kit.fontawesome.com/d6e8a18e82.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -36,7 +41,7 @@
   <!--===== HEADER =====-->
   <header class="l-header">
     <nav class="nav bd-grid">
-      <div>
+      <div data-aos="fade-up">
         <a href="#" class="nav__logo">
           <img src="assets/img/LOGO_REDUZIDA POSITIVA.png" width="55px" /></a>
       </div>
@@ -50,9 +55,6 @@
             <a href="#about" class="nav__link">Sobre Nós</a>
           </li>
           <li class="nav__item">
-            <a href="#skills" class="nav__link">Valores</a>
-          </li>
-          <li class="nav__item">
             <a href="#work" class="nav__link">Projetos</a>
           </li>
           <li class="nav__item">
@@ -61,7 +63,12 @@
         </ul>
       </div>
 
-      <div class="nav__toggle" id="nav-toggle">
+      <div class="nav__social-icons" data-aos="fade-up">
+        <a href="https://www.linkedin.com/in/airy-iot/" target="_blank" class="nav__social-icons"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://www.instagram.com/airyiot?igsh=MThtamlocDRxc3E0bw==" target="_blank" class="nav__social-icons  "><i class="bx bxl-instagram"></i></a>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle" data-aos="fade-up">
         <i class="bx bx-menu"></i>
       </div>
     </nav>
@@ -69,9 +76,9 @@
 
   <main class="l-main">
     <!--===== HOME =====-->
-    <section class="home bd-grid" id="home">
-      <div class="home__data">
-        <h1 class="home__title">
+    <section class="home bd-grid" id="home" >
+      <div class="home__data" data-aos="fade-up">
+        <h1 class="home__title" >
           Transformando sua <br />
           vida e seu negócio <br />
           com soluções IoT
@@ -80,14 +87,18 @@
         <a href="#contact" class="button">Cadastre-se</a>
       </div>
 
+     <!-- 
       <div class="home__social">
         <a href="https://www.linkedin.com/in/airy-iot/" class="home__social-icon" target="_blank"><i
             class="bx bxl-linkedin"></i></a>
         <a href="https://www.instagram.com/airyiot?igsh=MThtamlocDRxc3E0bw==" class="home__social-icon"
           target="_blank"><i class="bx bxl-instagram"></i></a>
       </div>
+    -->
 
-      <div class="home__img">
+    <div style="height: 150px;"></div> 
+
+      <div class="home__img" data-aos="fade-up">
         <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
           <mask id="mask0" mask-type="alpha">
@@ -105,113 +116,90 @@
     </section>
 
     <!--===== ABOUT =====-->
-    <section class="about section" id="about">
+    <section class="about section" id="about"style="background-color: #fafafa ">
       <h2 class="section-title">Sobre Nós</h2>
 
-      <div class="about__container bd-grid">
+      <div class="about__container bd-grid" data-aos="fade-up">
         <div class="about__img">
           <img src="assets/img/equipe_airy.jpeg" alt="" />
         </div>
 
-        <div>
+        <div data-aos="fade-up">
           <h2 class="about__subtitle">Somos a Airy</h2>
           <p class="about__text">
-            Na Airy, somos apaixonados por tecnologia e acreditamos que a Internet das Coisas (IoT) pode transformar a
-            vida dos pets. Desenvolvemos soluções inteligentes focadas no bem-estar animal, com monitoramento de saúde e
-            localização em tempo real, garantindo a segurança do seu pet e oferecendo tranquilidade para você, sempre
+            Apaixonados por tecnologia, acreditamos que a Internet das Coisas pode transformar a sua vida e daqueles que você ama. 
+            Desenvolvemos soluções inteligentes focadas no bem-estar, desde o monitoramento de saúde até a
+            localização em tempo real. Nosso propósito é garantir a sua segurança e tranquilidade, sempre
             conectado ao futuro.
           </p>
         </div>
       </div>
     </section>
 
-    <!--===== People =====-->
-    <section class="about section" id="about">
-      <h2 class="section-title">Membros Airy</h2>
-
-      <div class="carousel">
-        <div class="carousel__container">
-          <!-- Card 1 -->
-          <div class="carousel__item">
-            <img src="assets/img/equipe_airy.jpeg" alt="Membro 1" class="carousel__img" />
-            <h3 class="carousel__name">Nome do Membro 1</h3>
-            <p class="carousel__role">Cargo: Desenvolvedor</p>
-          </div>
-          <!-- Card 2 -->
-          <div class="carousel__item">
-            <img src="assets/img/equipe_airy.jpeg" alt="Membro 2" class="carousel__img" />
-            <h3 class="carousel__name">Nome do Membro 2</h3>
-            <p class="carousel__role">Cargo: Designer</p>
-          </div>
-          <!-- Card 3 -->
-          <div class="carousel__item">
-            <img src="assets/img/equipe_airy.jpeg" alt="Membro 3" class="carousel__img" />
-            <h3 class="carousel__name">Nome do Membro 3</h3>
-            <p class="carousel__role">Cargo: Gerente de Projeto</p>
-          </div>
-          <!-- Adicione mais cards conforme necessário -->
-        </div>
-        <!-- Botões de controle -->
-        <button class="carousel__control prev">&lt;</button>
-        <button class="carousel__control next">&gt;</button>
-      </div>
-    </section>
-
-    <!--===== Valores =====-->
-
-    <section class="work section" id="skills">
-      <h2 class="section-title">Valores</h2>
-
-      <div class="work__container bd-grid">
-        <div class="work__img">
-          <img src="assets/img/missao.png" alt="" />
-        </div>
-        <div class="work__img">
-          <img src="assets/img/quem.png" alt="" />
-        </div>
-        <div class="work__img">
-          <img src="assets/img/visao.png" alt="" />
-          </a>
-        </div>
-    </section>
-
+   
     <!--===== Projetos =====-->
-    <section class="work section" id="work">
-      <h2 class="section-title">Projetos</h2>
+    <section class="work section" id="work" data-aos="fade-up" >
+      <h2 class="section-title">Coleira Airy</h2>
 
-      <div class="work__container bd-grid">
-
-        <p></p>
-        <div class="work__img" onclick="showProject('project2')">
-          <img src="assets/img/cachorro.png" alt="" />
+      <div class="container" data-aos="fade-up">
+        <div class="product-image">
+          <img src="assets/img/cachorro.png" alt="Coleira Airy no pet">
         </div>
-        <p></p>
-      </div>
+    
+        <div class="features" data-aos="fade-up">
+          <!-- Feature 1 -->
+          <div class="card" onclick="showProject(localizacao)">
+            <i class="fa-solid fa-location-dot fa-3x" style="margin-bottom: 10px;"></i>
+            <h2 class="card-title">Monitoramento em Tempo Real</h2>
+            <p class="card-description">Veja onde seu pet está a qualquer momento, com dados precisos de localização.</p>
+          </div>
+    
+          <!-- Feature 2 -->
+          <div class="card" >
+            <i class="fa-solid fa-suitcase-medical fa-3x" style="margin-bottom: 10px;" alt="Saúde"></i>
+            <h2 class="card-title">Bem-Estar e Saúde</h2>
+            <p class="card-description">Saiba se seu pet está estressado ou precisa de mais passeios para manter a saúde.</p>
+          </div>
+    
+          <!-- Feature 3 -->
+          <div class="card">
+            <i class="fa-solid fa-temperature-high fa-3x" style="margin-bottom: 10px;"></i>
+            <h2 class="card-title">Controle de Temperatura</h2>
+            <p class="card-description">Monitore a temperatura ambiente e saiba se seu pet está confortável.</p>
+          </div>
+        </div>
 
     </section>
 
     <!--===== (Overlay) =====-->
-    <div class="project-overlay" id="projectOverlay">
+<div class="project-overlay" id="projectOverlay" data-aos="fade-up">
+  <!--===== Coleira Localização (Overlay) =====-->
+  <div class="project-content" id="localizacao">
+    <button class="back-button" onclick="goBack()">Voltar</button>
+    <h2 class="section-title">Localização</h2>
+    <img src="assets/img/localizacao.gif" alt="Imagem de localização do pet">
+  </div>
 
-      <!--===== Coleira(Overlay) =====-->
+  <!--===== Saúde (Overlay) =====-->
+  <div class="project-content" id="saude" data-aos="fade-up">
+    <button class="back-button" onclick="goBack()">Voltar</button>
+    <h2 class="section-title">Saúde</h2>
+    <img src="assets/img/telaSaude.png">
+  </div>
 
-      <div class="project-content" id="project2">
-        <button class="back-button" onclick="goBack()">Voltar</button>
-        <h2 class="section-title">Coleira Pet</h2>
-        <p>Detalhar sobre a Coleira</p>
-        <p>Detalhar sobre a Coleira</p>
-        <p>Detalhar sobre a Coleira</p>
-        <p>Detalhar sobre a Coleira</p>
-        <p>Detalhar sobre a Coleira</p>
-        <p>Detalhar sobre a Coleira</p>
-      </div>
-    </div>
+  <!--===== Temperatura (Overlay) =====-->
+  <div class="project-content" id="temp" data-aos="fade-up">
+    <button class="back-button" onclick="goBack()">Voltar</button>
+    <h2 class="section-title">Temperatura</h2>
+    <img src="assets/img/temp.png">
+  </div>
+</div>
 
     <!--===== CONTACT =====-->
-    <section class="contact section" id="contact">
+    <section class="contact section" id="contact" style="background-color: #fafafa ">
       <h2 class="section-title">Cadastre-se</h2>
 
-      <div class="contact__container bd-grid">
+      <div class="contact__container bd-grid" data-aos="fade-up">
         <form action="" class="contact__form">
           <input type="text" placeholder="Insira seu nome" class="contact__input" , name="name" />
           <input type="mail" placeholder="Insira seu Email" class="contact__input" , name="email" />
@@ -220,31 +208,73 @@
             <input type="checkbox" class="checkbox-input" id="check" />
             <span class="checkmark"></span>
           </label>
-          <div class="g-recaptcha" data-sitekey="6Le1NDEqAAAAAELbYtY8nyyRVs6rmrTOtFXvZSw6" style="
-                padding: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-              "></div>
           <button type="submit" id="button" class="button-submit">
             Enviar
           </button>
         </form>
-      </div>
+      </div>  
     </section>
   </main>
 
-  <!--===== FOOTER =====-->
-  <footer class="footer">
-    <p class="footer__title">Airy</p>
-    <div class="footer__social">
-      <a href="https://www.linkedin.com/in/airy-iot/" class="footer__icon" target="_blank"><i
-          class="bx bxl-linkedin"></i></a>
-      <a href="https://www.instagram.com/airyiot?igsh=MThtamlocDRxc3E0bw==" class="footer__icon" target="_blank "><i
-          class="bx bxl-instagram"></i></a>
+<!--===== FOOTER =====-->
+<footer class="footer" style="background-color: hsl(var(--hue-color), 56%, 12%); padding: 40px 0; color: #fff;">
+  <div class="footer__container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;" data-aos="fade-up">
+    <!-- Logo and Description -->
+    <div class="footer__logo" style="flex: 1;">
+      <img src="assets/img/LOGO_HORIZONTAL COR PRIMARIA.png" alt="Airy Logo" style="width: 150px; margin-left:20%">
+      <p style="max-width: 300px; margin-top: 10px;">Airy IoT, sempre cuidando de você.</p>
     </div>
-    <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
-  </footer>
+
+    <!-- Links Section -->
+    <div class="footer__links" style="flex: 2; display: flex; justify-content: space-around; margin-top: 20px;" data-aos="fade-up">
+      <!-- Início -->
+      <div>
+        <h3 style="color: #fff;">
+          <a href="#home" style="color: #fff; text-decoration: none;">Início</a>
+        </h3>
+      </div>
+
+      <!-- Sobre nós -->
+      <div data-aos="fade-up">
+        <h3 style="color: #fff;">
+          <a href="#about" style="color: #fff; text-decoration: none;">Sobre nós</a>
+        </h3>
+      </div>
+
+      <!-- Projetos -->
+      <div data-aos="fade-up">
+        <h3 style="color: #fff;">
+          <a href="#work" style="color: #fff; text-decoration: none;">Projetos</a>
+        </h3>
+      </div>
+
+      <!-- Cadastre-se -->
+      <div data-aos="fade-up">
+        <h3 style="color: #fff;">
+          <a href="#contact" style="color: #fff; text-decoration: none;">Cadastre-se</a>
+        </h3>
+      </div>
+    </div>
+
+    <!-- Contact & Subscribe -->
+    <div class="footer__contact" style="flex: 1; margin-top: 20px; text-align: right; margin-right: 175px">
+      <h3 style="color: #fff;">Redes Sociais</h3>
+      <div class="footer__social" style="margin-bottom: 20px;">
+        <a href="https://www.linkedin.com/in/airy-iot/" class="footer__icon" style="color: #999; margin-right: 10px;" target="_blank">
+          <i class="bx bxl-linkedin" style="font-size: 20px;"></i>
+        </a>
+        <a href="https://www.instagram.com/airyiot" class="footer__icon" style="color: #999;" target="_blank">
+          <i class="bx bxl-instagram" style="font-size: 20px;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div style="text-align: center; margin-top: 30px; border-top: 1px solid #333; padding-top: 20px;">
+    <p style="color: #999;">&#169; 2024 Airy. All rights reserved.</p>
+  </div>
+</footer>
 
   <!--===== SCROLL REVEAL =====-->
   <script src="https://unpkg.com/scrollreveal"></script>
@@ -253,5 +283,9 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+
+<script>
+  AOS.init();
+</script>
 
 </html>
