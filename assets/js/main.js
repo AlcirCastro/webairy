@@ -82,10 +82,21 @@ const handleSubmit = (event) => {
     })    
     .then(() => {
       removeLoading();
-      alert('Obrigado por se inscrever! Você receberá nossas atualizações em breve.');
+      showMessage('Obrigado por se inscrever! Você receberá nossas atualizações em breve.', 'success');
       form.reset();
       window.location.href = 'https://www.airyiot.com';
   })
+}
+
+function showMessage(message, type) {
+  const messageBox = document.createElement('div');
+  messageBox.className = `message ${type}`;  
+  messageBox.textContent = message;
+  document.body.appendChild(messageBox);
+
+  setTimeout(() => {
+      messageBox.remove();
+  }, 5000); 
 }
 
 document.querySelector('form').addEventListener('submit', handleSubmit);
