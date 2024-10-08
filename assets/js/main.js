@@ -83,7 +83,8 @@ const handleSubmit = (event) => {
         body: JSON.stringify({name, email, confirm}),
     })    
     .then(() => {
-      removeLoading();
+      form.reset();
+      removeLoading();               
       showMessage('Obrigado por se inscrever! Você receberá nossas atualizações em breve.');
       //window.location.href = 'https://www.airyiot.com';
   })
