@@ -83,7 +83,7 @@ const handleSubmit = (event) => {
     .then(() => {
       removeLoading();
       alert('Obrigado por se inscrever! Você receberá nossas atualizações em breve.');
-      window.location.href = 'https://www.airyiot.com';
+      //window.location.href = 'https://www.airyiot.com';
   })
 }
 
@@ -235,40 +235,6 @@ setInterval(() => {
     nextButton.click();
   }
 }, 3000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*===== SCROLL REVEAL ANIMATION =====*/
