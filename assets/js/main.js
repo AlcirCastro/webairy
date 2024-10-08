@@ -84,9 +84,8 @@ const handleSubmit = (event) => {
     })    
     .then(() => {
       removeLoading();
-      showMessage('Obrigado por se inscrever! Você receberá nossas atualizações em breve.', 'success');
-      form.reset();
-      window.location.href = 'https://www.airyiot.com';
+      showMessage('Obrigado por se inscrever! Você receberá nossas atualizações em breve.');
+      //window.location.href = 'https://www.airyiot.com';
   })
 }
 
@@ -102,8 +101,6 @@ function showMessage(message, type) {
 }
 
 document.querySelector('form').addEventListener('submit', handleSubmit);
-
-
 
 
 
@@ -249,40 +246,6 @@ setInterval(() => {
     nextButton.click();
   }
 }, 3000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*===== SCROLL REVEAL ANIMATION =====*/
