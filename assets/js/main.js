@@ -68,7 +68,7 @@ const handleSubmit = (event) => {
     }
     
     const captchaResponse = grecaptcha.getResponse();
-    if (!captchaResponse.length > 0){
+    if (captchaResponse.length === 0){
         removeLoading();
         alert('Valide o captcha');
         throw new Error('Captcha is required');
@@ -83,11 +83,15 @@ const handleSubmit = (event) => {
         body: JSON.stringify({name, email, confirm}),
     })    
     .then(() => {
+      showMessage('Obrigado por se inscrever! Você receberá nossas atualizações em breve.', 'sucess');
       form.reset();
       removeLoading();               
-      showMessage('Obrigado por se inscrever! Você receberá nossas atualizações em breve.');
       //window.location.href = 'https://www.airyiot.com';
   })
+  .catch(() => {
+    showMessage('Houve um problema ao enviar o formulário.', 'error');
+    removeLoading();
+  });
 }
 
 function showMessage(message, type) {
